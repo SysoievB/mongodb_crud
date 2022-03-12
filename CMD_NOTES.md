@@ -28,9 +28,9 @@ Ctrl+up or Ctrl+down - shows previous command
 
 pwd - output:/c/Users/Bogdan/Desktop - present working directory
 
-ls - shows list of files inside this file
+ls - shows list of folders inside this folder
 
-cd /c/Users/Bogdan/Desktop/sample - goes to the file sample
+cd /c/Users/Bogdan/Desktop/sample - goes to the folder sample
 
 cd .. - goes to the previous directory
 
@@ -38,17 +38,17 @@ cd .. - goes to the previous directory
 
 cd ~ - goes to the beginning of the directory
 
-mkdir new_file - creates new file with name new_file
+mkdir new_file - creates new folder with name new_file
 
-rm -rf new_file - removes file with name new_file
+rm -rf new_file - removes folder with name new_file
 
 mv new_file sample - moves new_file to the sample (sample/new_file)
 
 mkdir -p new/new1/new2 - creates path new/new1/new2 
 
-tree.com //a - shows structure of all files in this path
+tree.com //a - shows structure of all folders in this path
  
-tree.com //a new - shows structure of file new only
+tree.com //a new - shows structure of folder new only
  
 cat query.sql - shows the content of the file query.sql
 
@@ -66,4 +66,28 @@ echo "select * from tickets;" >> query1.sql writes to the file query1.sql line s
 
 
 cp -v query1.sql query.sql - copies query1 content to query
+
+find . - shows structure of every file in this path
+
+find . -name query1.sql - finds query1.sql
+
+find . -empty - shows structure of every empty file in this path
+
+find . -name query1.sql -delete - deletes file query1.sql
+
+```
+grep -r "select"
+query.sql:select * from tickets;
+query.sql:select * from tickets;
+query.sql:select * from users;
+``` 
+grep shows srings in all files
+
+```
+$ grep -rni "tickets" .
+./query.sql:1:select * from tickets;
+./query.sql:2:select * from tickets;
+```
+shows number of lines where this string is
+
 
