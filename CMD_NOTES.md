@@ -28,3 +28,8 @@ pwd - output:/c/Users/Bogdan/Desktop - present working directory
 
 ls - shows list of files inside this file
 
+cd /c/Users/Bogdan/Desktop/sample - goes to the file sample
+
+cd .. - goes to the previous directory
+
+```cd -``` - output/c/Users/Bogdan/Desktop/sample
