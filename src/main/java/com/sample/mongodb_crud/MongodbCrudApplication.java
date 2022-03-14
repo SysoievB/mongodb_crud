@@ -19,7 +19,7 @@ public class MongodbCrudApplication {
         SpringApplication.run(MongodbCrudApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner runner(StudentRepository repository, MongoTemplate mongoTemplate) {
         return args -> {
             Address address = new Address("England", "London", "NE9");
@@ -46,7 +46,7 @@ public class MongodbCrudApplication {
 
             //usingMongoTemplateAndQuery(repository, mongoTemplate, email, student);
         };
-    }
+    }*/
 
     private void usingMongoTemplateAndQuery(StudentRepository repository, MongoTemplate mongoTemplate, String email, Student student) {
         Query query = new Query();
