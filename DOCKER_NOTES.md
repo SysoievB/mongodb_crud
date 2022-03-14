@@ -1,5 +1,7 @@
 # DOCKER NOTES
 
+![image](C:\Users\Bogdan\IdeaProjects\mongodb_crud\src\main\resources\images\docker_arc.png)
+
 docker --version 
 
 docker ps -> list of running containers
