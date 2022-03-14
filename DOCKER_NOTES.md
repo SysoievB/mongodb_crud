@@ -1,6 +1,6 @@
 # DOCKER NOTES
 
-![image](C:\Users\Bogdan\IdeaProjects\mongodb_crud\src\main\resources\images\docker_arc.png)
+![image](https://github.com/SysoievB/mongodb_crud/blob/main/src/main/resources/images/docker_arc.png)
 
 docker --version 
 
