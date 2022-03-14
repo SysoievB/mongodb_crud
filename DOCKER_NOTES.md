@@ -18,8 +18,10 @@ docker rm id - removes container
 
 docker rm -f id - force remove
 
+```
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
-  - vertical format for the list of containers 
+```
+  <- vertical format for the list of containers 
 
 docker ps --format=$FORMAT - command for the format
 
