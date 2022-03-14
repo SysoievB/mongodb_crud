@@ -31,4 +31,10 @@ docker run --name 2048 -p 81:80 -p 5000:80 -p 3000:80 -d amigoscode/2048 -> chan
 
 docker run --name website -d -p 8080:80 nginx -> -d means detach mode
 
+docker image rm nginx | docker rmi nginx -> removes image nginx but first need to remove this container -> docker rm -f website
+
+docker pull nginx -> pulling nginx image without running
+
+docker image inspect name_of_image 
+
 
