@@ -23,7 +23,7 @@ public class MongodbCrudApplication {
     CommandLineRunner runner(StudentRepository repository, MongoTemplate mongoTemplate) {
         return args -> {
             Address address = new Address("England", "London", "NE9");
-            String email = "ahmed@mail.com";
+            String email = "sdkjhfs@mail.com";
             Student student = new Student(
                     "Jamila",
                     "Ahmed",
@@ -35,11 +35,24 @@ public class MongodbCrudApplication {
                     LocalDateTime.now()
             );
 
-            Query query = new Query();
-            query.addCriteria(Criteria.where("email").is(email));
-            mongoTemplate.find(query, Student.class);
+            repository.findStudentByEmail(email)
+                    .ifPresentOrElse(s -> {
+                                System.out.println(s + " already exists");
+                            },
+                            () -> {
+                                System.out.println("Inserting student " + student);
+                                repository.insert(student);
+                            });
 
-            repository.insert(student);
+            //usingMongoTemplateAndQuery(repository, mongoTemplate, email, student);
         };
+    }
+
+    private void usingMongoTemplateAndQuery(StudentRepository repository, MongoTemplate mongoTemplate, String email, Student student) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("email").is(email));
+        mongoTemplate.find(query, Student.class);
+
+        repository.insert(student);
     }
 }
