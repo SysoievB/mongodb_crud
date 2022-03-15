@@ -39,4 +39,7 @@ docker pull nginx -> pulling nginx image without running
 
 docker image inspect name_of_image 
 
+docker run bash bash -c "echo foo > bar.txt && cat bar.txt" - writes line to the file and shows it
+
+docker volume ls -> list of volumes 
 
