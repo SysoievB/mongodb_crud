@@ -47,5 +47,5 @@ docker volume ls -> list of volumes
 
 docker pull image_name -> always pulls latest, should pull another image name instead of latest
 
-docker tag dashboard:latest dashbord:1 -> renaming & coping tag from dashboard:latest to dashboard:1
+docker tag dashboard:latest dashbord:1 -> renaming & coping tag from dashboard:latest to dashboard:1(should never use latest in production)
 
