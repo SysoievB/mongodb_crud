@@ -43,3 +43,9 @@ docker run bash bash -c "echo foo > bar.txt && cat bar.txt" - writes line to the
 
 docker volume ls -> list of volumes 
 
+#### Image Tagging and Versioning
+
+docker pull image_name -> always pulls latest, should pull another image name instead of latest
+
+docker tag dashboard:latest dashbord:1 -> renaming & coping tag from dashboard:latest to dashboard:1
+
