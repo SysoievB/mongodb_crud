@@ -49,3 +49,4 @@ docker pull image_name -> always pulls latest, should pull another image name in
 
 docker tag dashboard:latest dashbord:1 -> renaming & coping tag from dashboard:latest to dashboard:1(should never use latest in production)
 
+docker run --name dashboard -d -p 8080:80 nginx  -> run own container where dashboard is the name of project 
