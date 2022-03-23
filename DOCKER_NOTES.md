@@ -49,4 +49,15 @@ docker pull image_name -> always pulls latest, should pull another image name in
 
 docker tag dashboard:latest dashbord:1 -> renaming & coping tag from dashboard:latest to dashboard:1(should never use latest in production)
 
-docker run --name dashboard -d -p 8080:80 nginx  -> run own container where dashboard is the name of project 
+docker run --name dashboard -d -p 8080:80 nginx  -> run own container where dashboard is the name of project
+
+docker exec dashboard ls -> shows file structure of dashboard
+
+docker network create mongo -> creates network(container for few separate containers) with name mongo
+
+docker inspect dashboard -> shows all information about container dashboard
+
+ docker network ls -> list of networks
+ 
+ Docker compose - is a tool for defining and running multi-container docker applications using a yaml file
+
