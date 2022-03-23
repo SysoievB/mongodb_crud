@@ -20,7 +20,7 @@ Alt+D - deletes word fully forwards
 
 date - output:Sat Mar 12 15:29:39     2022
 
-whoami - output:Bogdan 
+whoami - output:User_Name 
 
 Ctrl+up or Ctrl+down - shows previous command
 
