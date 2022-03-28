@@ -61,3 +61,18 @@ docker inspect dashboard -> shows all information about container dashboard
  
  Docker compose - is a tool for defining and running multi-container docker applications using a yaml file
 
+### Docker own container creation
+
+Dockerfile:
+```
+FROM container_name
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["container_name", "file_name"]
+```
+docker build .
+
+docker run container_id
