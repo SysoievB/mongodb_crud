@@ -2,7 +2,7 @@
 
 Ctrl+L (or write clear command) - clean the console
 
-echo $SHELL - output:/usr/bin/bash - shows whitch console we use
+echo $SHELL - output:/usr/bin/bash - shows which console we use
 
 echo hello - output: hello
 
