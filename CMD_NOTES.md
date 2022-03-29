@@ -58,7 +58,7 @@ cat | less | tail | head - shows content of the file
 
 mv new newest rename file from new to the newest
 
-touch query1.sql - creates file query1.sql
+touch query1.sql - creates file query1.sql or -> type nul > script.js
 
 echo "select * from users;" > query1.sql - rewrites to the file query1.sql line select * from users;
 
