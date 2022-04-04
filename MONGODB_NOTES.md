@@ -113,3 +113,80 @@ DB methods:
         db.version() current version of the server
         
         db.watch() - opens a change stream cursor for a database to report on all  changes to its non-system collections.
+
+collection -> table in SQL
+
+document -> object or a string of the table in SQL
+
+db.createCollection("person") 
+output: { "ok" : 1 } 
+
+show collections
+output: person
+
+db.person.stats() -> all info about the collection
+
+db.person.drop() -> removes collection
+output: true
+
+```
+db.createCollection( <name>,
+   {
+     capped: <boolean>,
+     autoIndexId: <boolean>,
+     size: <number>,
+     max: <number>,
+     storageEngine: <document>,
+     validator: <document>,
+     validationLevel: <string>,
+     validationAction: <string>,
+     indexOptionDefaults: <document>,
+     viewOn: <string>,              // Added in MongoDB 3.4
+     pipeline: <pipeline>,          // Added in MongoDB 3.4
+     collation: <document>,         // Added in MongoDB 3.4
+     writeConcern: <document>
+   }
+)       -> layout for collection creation
+```
+        
+db.student.insert(student) -> insert new object with name student
+
+ ObjectId("609fca6996fbd361579277d3").getTimestamp() -> returns time when object was created
+ 
+db.student.insertMany(students) -> students is a file js with many objects
+
+Всего имеется следующие типы значений:
+
+- String: строковый тип данных, как в приведенном выше примере (для строк используется кодировка UTF-8)
+
+- Array (массив): тип данных для хранения массивов элементов
+
+- Binary data (двоичные данные): тип для хранения данных в бинарном формате
+
+ - Boolean: булевый тип данных, хранящий логические значения TRUE или FALSE, например, {"married": FALSE}
+
+ - Date: хранит дату в формате времени Unix
+
+ - Double: числовой тип данных для хранения чисел с плавающей точкой
+
+ - Integer: используется для хранения целочисленных значений размером 32 бита, например, {"age": 29}
+
+ - Long: используется для хранения целочисленных значений размером 64 бита
+
+ - JavaScript: тип данных для хранения кода javascript
+
+ - Min key/Max key: используются для сравнения значений с наименьшим/наибольшим элементов BSON
+
+ - Null: тип данных для хранения значения Null
+
+ - Object: строковый тип данных, как в приведенном выше примере
+
+ - ObjectId: тип данных для хранения id документа
+
+ - Regular expression: применяется для хранения регулярных выражений
+
+ - Decimal128: тип данных для хранения десятичных дробных чисел размером 128 бит, которые позволяют решить 
+проблемы с проблемой точности вычислений при использовании дробных чисел, которые представляют тип Double.
+
+ - Timestamp: применяется для хранения времени
+
