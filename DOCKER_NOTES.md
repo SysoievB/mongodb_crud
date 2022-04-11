@@ -102,3 +102,11 @@ To view local images run
 To view running containers
 - docker ps 
 ```
+```
+//create new repo in dockerhub with jib
+docker login registry.hub.docker.com
+
+docker login registry-1.docker.io
+
+./mvnw clean install jib:build -Dimage=sysoiev/spring-react-fullstack:latest
+```
