@@ -109,6 +109,8 @@ docker login registry.hub.docker.com
 docker login registry-1.docker.io
 
 ./mvnw clean install jib:build -Dimage=sysoiev/spring-react-fullstack:latest
+./mvnw clean install -P build-frontend -P jib-push-to-dockerhub
+
 
 //run the image
 docker run -p 8181:8181 sysoiev/spring-react-fullstack
